@@ -1,3 +1,8 @@
+html, body, h1 {
+  margin: 0;
+  padding: 0;
+}
+
 .switch_color .b1 {
   color: blue;
 }
@@ -10,3 +15,30 @@
   padding: 5px;
   margin-top: 5px;
 }
+
+.header {
+  height: 100px;
+  background-color: #3bc5f0;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  line-height: 100px;
+}
+
+.nav {
+  text-align: center;
+}
+
+.linkContent {
+  width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #eee;
+}
+
+//.nav a.active {
+//  background-color: #e0e0e0;
+//}

@@ -4,6 +4,17 @@
     <!--<p *ngSwitchDefault>Invalid color</p>-->
 <!--</div>-->
 
+<header class="header">
+  <h1>Angular 2</h1>
+</header>
+<nav class="nav">
+  <a class="btn btn-default" routerLink="/department">Department</a>
+  <a class="btn btn-default" routerLink="/employee">Employee</a>
+</nav>
+<div class="linkContent">
+  <router-outlet></router-outlet>
+</div>
+
 <div class="container">
   <h2>User Data</h2>
   <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
