@@ -6,7 +6,7 @@
 
 <div class="container">
   <h2>User Data</h2>
-  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" novalidate>
     <div class="form-group">
       <label>Name</label>
       <input type="text" #nameRef="ngModel" required minlength="4" class="form-control" name="name" ngModel>
@@ -37,7 +37,7 @@
         <input type="text" class="form-control" name="postalCode" ngModel>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
   </form>
 </div>
 
