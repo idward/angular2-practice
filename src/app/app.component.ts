@@ -38,6 +38,10 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.myForm);
+    console.log(this.myForm.value);
+    let data = this.myForm.value;
+    let key = btoa(btoa(data.name) + '??' + btoa(data.email));
+    console.log(key);
   }
+
 }
