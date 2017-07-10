@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Department} from "./department.model";
 import {DepartmentService} from "./department.service";
-import {Router} from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-department',
@@ -12,7 +12,8 @@ import {Router} from '@angular/router';
 export class DepartmentComponent implements OnInit {
   departments:Department[];
 
-  constructor(private _departmentService:DepartmentService,private _router:Router) {
+  constructor(private _departmentService:DepartmentService,
+              private _router:Router, private _route:ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -20,7 +21,8 @@ export class DepartmentComponent implements OnInit {
   }
 
   onSelect(department:Department) {
-    this._router.navigate(['/department', department.deptId]);
+    // this._router.navigate(['/department', department.deptId]);
+    this._router.navigate([department.deptId], {relativeTo: this._route});
   }
 
 }

@@ -23,12 +23,14 @@ export class DepartmentDetailComponent implements OnInit {
 
   goPrev() {
     let deptId = parseInt(this.departmentId);
-    this._router.navigate(['/department', deptId - 1]);
+    // this._router.navigate(['/department', deptId - 1]);
+    this._router.navigate(['../', deptId - 1], {relativeTo: this._route});
   }
 
   goNext() {
     let deptId = parseInt(this.departmentId);
-    this._router.navigate(['/department', deptId + 1]);
+    // this._router.navigate(['/department', deptId + 1]);
+    this._router.navigate(['../', deptId + 1], {relativeTo: this._route});
   }
 
 }
